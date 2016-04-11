@@ -1,0 +1,16 @@
+{
+  "name": "agenda",
+  "main": "agenda.d.ts",
+  "homepage": "https://github.com/rschmukler/agenda",
+  "version": "0.8.0",
+  "devDependencies": {
+    "blue-tape": "registry:npm/blue-tape#0.1.0+20160322235613"
+  },
+  "ambientDevDependencies": {
+    "mocha": "registry:dt/mocha#2.2.5+20160317120654",
+    "node": "registry:dt/node#4.0.0+20160319033040"
+  },
+  "dependencies": {
+    "mongodb": "registry:npm/mongodb#2.1.0+20160329101818"
+  }
+}

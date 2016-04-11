@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "echo building... && typings bundle -o out",
+    "lint": "echo linting... && tslint \"agenda.d.ts\"",
+    "source-test": "echo source-testing... &&  cd source-test && mocha --require ts-node/register \"agenda.ts\"",
+    "watch": "onchange \"**/*.ts\" -i -e \"out/**\" -- npm -s run build+test",
+    "publish": "npm -s run lint+build+test && echo please publish to typings/registry",
+    "build+test": "npm run build && npm run source-test",
+    "lint+build+test": "npm run lint && npm run build+test",
+    "prepublish": "typings install"
+  },
+  "devDependencies": {
+    "agenda": "0.8.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.5",
+    "moment-timezone": "^0.5.3",
+    "mongodb": "^2.1.16",
+    "onchange": "^2.2.0",
+    "q": "^1.4.1",
+    "ts-node": "^0.7.1",
+    "tslint": "^3.7.0",
+    "tslint-config-typings": "^0.2.0",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.11"
+  }
+}
